@@ -56,6 +56,8 @@ class GameFragment : Fragment() {
         // data in the VieWModel
         binding.gameViewModel = viewModel
 
+        // Specify the current activity as the lifecycle owner of the binding. This is used so that
+        // the binding can observe LiveData updates
         binding.setLifecycleOwner(this)
 
         /** Setting up LiveData observation relationship **/
